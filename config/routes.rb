@@ -1,8 +1,11 @@
 NewProject::Application.routes.draw do
- namespace :admin do
+  root :to => 'home#index'
+  devise_for :users
+
+  namespace :admin do
     resources :dashboards, :only => "index"
     resources :pages
-    end
+  end
 
   resources :pages
   get ":permalink" => "pages#show", :as => :permalink

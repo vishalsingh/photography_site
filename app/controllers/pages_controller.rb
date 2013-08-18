@@ -13,7 +13,9 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = Page.where(:title => params[:permalink]).first
+    if params[:permalink]
+      @page = Page.where(:title => params[:permalink]).first
+    end
   end
   # GET /pages/new
   # GET /pages/new.json
