@@ -1,5 +1,0 @@
-<%# title "New Admin/Page" %>
-
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", admin_pages_path %></p>
